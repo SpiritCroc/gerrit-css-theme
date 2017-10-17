@@ -24,7 +24,7 @@ body,
 }
 input:not([type="checkbox"]),
 textarea {
-	-moz-appearance: none;
+	
 }
 a {
 	transition: background 0.1s linear 0s, color 0.1s linear 0s;
@@ -157,9 +157,9 @@ button {
 	margin-top: 3px;
 	border-color: #C7C7C7;
 }
-@media screen and (max-width: 1470px) {
+@media screen and (max-width: 1170px) {
 	.gerritTopMenu .topmenuMenuRight {
-		float: none;
+                float: none;
 	}
 }
 @media screen and (max-width: 1280px) {
@@ -199,9 +199,20 @@ button {
 	margin-left: 8px;
 	vertical-align: top;
 }
-.gerritTopMenu .topmenuTDglue {
-	width: auto;
+
+.gerritTopMenu .topmenuTDmenu {
+        vertical-align: top;
 }
+
+.gerritTopMenu .topmenuTDglue {
+        background-image:url('/static/logo_black.png');
+        position: relative;
+        top: 7px;
+        width: 189px;
+        height: 86px;
+ 
+}
+
 .gerritTopMenu .menuBarUserNamePanel {
 	margin-left: 25px;
 }
@@ -234,6 +245,8 @@ button {
 #gerrit_header {
 	max-width: 1600px;
 	margin: 0 auto;
+	position: absolute;
+	top: 0;
 }
 #gerrit_header #diffy_logo {
 	display: none !important;
@@ -680,7 +693,7 @@ th.com-google-gerrit-client-change-FileTable-FileTableCss-deltaColumn2 {
 @media (min-width: 1600px) {
 		.gwt-TabPanel.com-google-gerrit-client-change-RelatedChanges-RelatedChangesCss-tabPanel {
 		width: calc(100% + 100px);
-		margin-left: -100px;
+		margin-left: -5px;
 	}
 }
 .gwt-TabPanel.com-google-gerrit-client-change-RelatedChanges-RelatedChangesCss-tabPanel .gwt-TabBarItem-wrapper {
@@ -701,6 +714,7 @@ th.com-google-gerrit-client-change-FileTable-FileTableCss-deltaColumn2 {
 }
 .com-google-gerrit-client-change-RelatedChanges-RelatedChangesCss-tabPanel {
 	width: 100%;
+        margin-left -1px;
 }
 .gwt-TabBar {
 	border-bottom: 3px solid #ccc;
@@ -867,6 +881,8 @@ button.com-google-gerrit-client-change-Reviewers_BinderImpl_GenCss_style-openAdd
 	position: relative;
 	padding-right: 19px;
 	font-size: 13px;
+        font-weight: bold;
+        min-width: 120px;
 }
 .com-google-gerrit-client-change-ChangeScreen_BinderImpl_GenCss_style-popdown button div::before {
 	content: '';
@@ -1087,7 +1103,7 @@ button.com-google-gerrit-client-change-Reviewers_BinderImpl_GenCss_style-openAdd
 }
 @media (max-width: 1280px) {
 	.menuBarUserNamePanel {
-		position: absolute;
+		position: static;
 		right: 0;
 		top: 22px;
 	}
